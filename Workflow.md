@@ -19,3 +19,9 @@ remove_vsicurl <- function(url) {
 # Apply the function to the URLs vector
 new_urls <- lapply(urls, remove_vsicurl)
 ```
+
+# Notes
+- spatial raster temp in places like this
+- C:\Users\rscott\AppData\Local\Temp\RtmpcHNmot
+
+
