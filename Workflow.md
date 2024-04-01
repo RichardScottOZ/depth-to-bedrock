@@ -10,7 +10,7 @@ Warning: CURL error: schannel: CertGetCertificateChain trust error CERT_TRUST_IS
 ### vsicurl error
 - get rid of /vsicurl/
 
-# Function to remove the /vsicurl/ prefix
+#### Function to remove the /vsicurl/ prefix
 ```R
 remove_vsicurl <- function(url) {
   gsub("^/vsicurl/", "", url)
