@@ -24,4 +24,10 @@ new_urls <- lapply(urls, remove_vsicurl)
 - spatial raster temp in places like this
 - C:\Users\rscott\AppData\Local\Temp\RtmpcHNmot
 
+- C:\Users\rscott\AppData\Local\Temp\RtmpcHNmot
+
+- MODIS files similarlry
+  - MOD09A1.A2020185.h10v03.061.2020340144126.hdf
+
+
 
