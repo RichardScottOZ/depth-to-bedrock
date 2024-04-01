@@ -20,6 +20,12 @@ remove_vsicurl <- function(url) {
 new_urls <- lapply(urls, remove_vsicurl)
 ```
 
+#### saga_cmd
+- Error in system(paste(shQuote(saga_cmd), "--version"), intern = T) : 
+  'CreateProcess' failed to run 'C:\Users\rscott\DOWNLO~1\SAGA-9~1.2_X --version'
+- you can pass in the actual binary to the function when testing - but full path  
+- saga <- Rsagacmd::saga_gis(raster_format = "SAGA", all_outputs = FALSE, saga_bin='C:/Users/rscott/Downloads/saga-9.3.2_x64/saga_cmd.exe')
+
 # Notes
 - spatial raster temp in places like this
 - C:\Users\rscott\AppData\Local\Temp\RtmpcHNmot
