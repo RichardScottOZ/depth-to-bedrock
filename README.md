@@ -9,9 +9,13 @@ https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296881
 
 ## Overview
 
-The depth to bedrock prediction model for Alberta uses an R project
-workflow based on the tidyverse and tidymodels suite of packages. The
-workflow is re-executed via the following steps:
+This repository provides both **R** and **Python** implementations for depth to bedrock prediction.
+
+The original R-based workflow uses the tidyverse and tidymodels suite of packages. A Python implementation using scikit-learn and geopandas is also available in the `python/` directory.
+
+### Workflow Steps
+
+The workflow is re-executed via the following steps:
 
 1.  Data preparation (downloading publicly available remote sensing
     datasets and terrain analysis using the [Rsagacmd
@@ -29,6 +33,8 @@ workflow is re-executed via the following steps:
 
 ## Requirements
 
+### R Implementation
+
 This R project uses a reproducible environment based on the [renv
 package](https://rstudio.github.io/renv/articles/renv.html). This
 environment uses R package versions that were installed under Ubuntu
@@ -40,6 +46,25 @@ versions that will be installed are specified in the `renv.lock` file.
 ``` r
 renv::restore()
 ```
+
+### Python Implementation
+
+For the Python implementation, see the `python/` directory. Install dependencies using:
+
+``` bash
+cd python
+pip install -r requirements.txt
+```
+
+Or using conda:
+
+``` bash
+cd python
+conda env create -f environment.yml
+conda activate depth-to-bedrock
+```
+
+For detailed Python setup instructions, see [python/README.md](python/README.md).
 
 This project has an external dependency - SAGA-GIS (\>= 7.3) where the
 `saga_cmd` binary needs to be available in the system path. The
@@ -80,6 +105,10 @@ training time.
 The folder structure is organized as follows:
 
 - `R`: R scripts used to prepare data and run the model.
+- `python`: Python implementation of the DTB prediction workflow.
+  - `functions`: Core Python modules for DTB prediction.
+  - `scripts`: Python workflow scripts.
+  - `notebooks`: Jupyter notebooks for interactive analysis (optional).
 - `projdata`: Data required by the model and visualizations.
 - `outputs`: Model results (created by the scripts).
 - `models`: Trained models (created by the scripts).
